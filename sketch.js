@@ -4,6 +4,17 @@ var allPlayers;
 var form,player,game,playerCount;
 var gameState=0;
 var car1,car2,car3,car4,cars;
+var car1Image,car2Image,car3Image,car4Image,track,ground;
+
+function preload(){
+    car1Image=loadImage("images/car1.png");
+    car2Image=loadImage("images/car2.png");
+    car3Image=loadImage("images/car3.png");
+    car4Image=loadImage("images/car4.png");
+    track = loadImage("images/track.jpg");
+    ground = loadImage("images/ground.png");
+
+}
 
 
 function setup(){
@@ -24,5 +35,7 @@ function draw(){
         clear();
         game.play();
     }
-
+    if(gameState===2){
+        game.end();
+    }
 }
